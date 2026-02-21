@@ -1,0 +1,675 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#image{
+    background-image: url("../img/backgroundHome.png");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#navSection{
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(px);
+    z-index: 1000
+}
+
+#navSection img {
+    height: 150px; 
+    width: auto;
+    padding-left: 55px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 100px;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.titolo-pizzeria{
+    padding: 50px;
+    top: 120px;
+    text-align: left;
+    left: 100px;
+    position: absolute;
+    text-shadow: black;
+    font-size: 50px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#prenota_ora{
+    padding:  15px 70px;
+    top: 440px;
+    left: 140px;
+    position: absolute;
+    text-decoration: none;
+    background-color: brown;
+    border-radius: 10px;
+    color: black;
+    font-size: 30px;
+}
+
+#Prenota{
+    background-color: brown;
+    padding: 30px 120px;
+}
+
+.prenota-h1{
+    display: block;
+    text-align: center;
+    font-size: 42px;
+    color: rgba(255, 255, 255, 0.774);
+    position: relative;
+}
+
+.numeroDiTelefono{
+    display: flex;
+    font-size: 46px;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-decoration-line: underline;
+    color: cyan;
+    padding: 10px;
+}
+
+#Menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: brown;
+    padding-bottom: 30px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 350px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.menu-cibo{
+    background-color: rgb(144, 41, 12);
+    border: 5px;
+    border-color: rgba(255, 255, 0, 0.971);
+    border-radius: 10px;
+    font-size: 20px;
+    
+}
+
+.menu-bevande{
+    background-color: rgb(144, 41, 12);
+    border: 5px;
+    border-color: rgba(255, 255, 0, 0.971);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#cosa-offriamo{
+    display: flex;
+    font-size: 22px;
+    justify-content: center;
+    padding: 50px;
+}
+
+#centrato{
+    text-align: center;
+}
+
+#distanziato{
+    padding-left: 20px;
+}
+
+#titolo-chiSiamo{
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+}
+
+.chi-siamo{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 36px;
+    background-color: brown;
+    color: white;
+    padding: 20px 40px;
+}
+
+#h2-chiSiamo{
+    font-size: 45px;
+    color: black;
+    text-align: center;
+    background-color: brown;
+    margin-top: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#logo2{
+    height: 350px; 
+    width: auto;
+    margin-right: 100px;
+}
+
+.footer{
+    background-color: black;
+    padding: 30px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.footer-navbar{
+    padding: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-navbar a:hover{
+    text-decoration-line: underline;
+    color: cyan;
+}
+
+#footer-copyright{
+    color: white;
+    text-align: center;
+}
+
+#orari-apertura{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+    padding: 10px;
+}
+
+#titolo-orari{
+    text-align: left;
+    font-size: 44px;
+
+}
+
+#orari{
+    display: flex;
+    justify-content: left;
+}
+
+#paragrafo-orari{
+    font-size: 30px;
+    text-align: left;
+}
+
+#pizza-img{
+    display: flex;
+    height: 300px;
+    width: auto;
+    margin-left: 80px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+.pizza-div{
+    display: flex;
+    margin-bottom: 50px;
+    padding: 10px;
+
+}
+
+.birra-div{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+#pizza-p{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: brown;
+    margin-left: 40px;
+    padding: 10px 80px;
+    border-radius: 20px;
+}
+
+
+#birra-p{
+    display: flex;
+    font-size: 40px;
+    padding: 0 100px;
+    margin-top: 120px;
+    margin-left: 50px;
+    background-color: brown;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#birra-img{
+    display: flex;
+    height: 300px;
+    width: auto;
+    justify-content: flex-end;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    margin-right: 20px;
+
+}
+
+#paragrafo-contattaci{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    font-size: 30px;
+    background-color: brown;
+    padding: 10px 40px;
+    margin: 0;
+    color: white;
+}
+
+.map-container{
+    display: flex;
+    background-color: brown;
+    font-size: 30px;   
+    color: white;
+    padding: 30px 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.map-container iframe{
+    margin: 20px;
+    width: 100%;
+    height: 500px;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+#dove-trovarci-titolo{
+    text-align: center;
+    font-size: 44px;
+}
+
+#menu-li{
+    padding: 15px;
+}
+
+#hr1{
+    padding: 2px;
+    margin: 0;
+    color: black;
+}
+
+.fade-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+    }
+
+.fade-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburger{
+    display: none;
+    gap: 5px;
+    padding: 10px;
+    flex-direction: column;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+  
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding:  5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .hamburger {
+        display: flex; 
+        margin-right: 30px;
+    }
+
+    .titolo-pizzeria{
+        padding: 5px;
+        margin-top: 120px;
+        text-align: left;
+        left: 20px;
+        position: absolute;
+        text-shadow: black;
+        font-size: 36px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background-color: rgba(0,0,0,0.8);
+        width: 400px;
+        padding: 5px;
+    }
+
+    .navbar.active{
+        display: flex;
+    }
+
+    #navSection img {
+        height: 150px; 
+        width: auto;
+        padding-left: 0;
+    }
+        
+    #prenota-ora{
+        padding:  15px 25px;
+        margin-top: 10px;
+        margin-left: -35px;
+        position: absolute;
+        text-decoration: none;
+        background-color: brown;
+        border-radius: 10px;
+        color: black;
+        font-size: 32px;
+    }
+
+    #Prenota{
+        background-color: brown;
+        padding: 5px 15px;
+    }
+
+    .prenota-h1{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        position: relative;
+    }
+
+    .numeroDiTelefono{
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        margin-bottom: 10px;
+        text-decoration-line: underline;
+        color: cyan;
+    }
+
+    #Menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        border-radius: 10px;
+        padding: 0;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-left: 6px;
+        padding: 0;
+    }
+
+    .menu-cibo{
+        background-color: brown;
+        border: 2px;
+        border-color: rgba(255, 255, 0, 0.971);
+        border-radius: 5px;
+        font-size: 16px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 0;
+    }
+
+    .menu-bevande{
+        background-color: brown;
+        border: 2px;
+        border-color: rgba(255, 255, 0, 0.971);
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    #cosa-offriamo{
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    #centrato{
+        text-align: center;
+    }
+
+    #distanziato{
+        padding-left: 5px;
+    }
+
+    #titolo-chiSiamo{
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #titolo-chiSiamo{
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .chi-siamo{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        font-size: 15px;
+        background-color: brown;
+        color: white;
+        padding: 4px 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #h2-chiSiamo{
+        font-size: 22px;
+        color: black;
+        text-align: center;
+        background-color: brown;
+        margin-top: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    #logo2{
+        height: 100px; 
+        width: auto;
+        margin-right: 5px;
+        margin-top: 25px;
+    }
+
+    .footer{
+        background-color: black;
+        padding: 5px;
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .footer-navbar{
+        padding: 5px;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer-navbar a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer-navbar a:hover{
+        text-decoration-line: underline;
+        color: cyan;
+    }
+
+    #footer-copyright{
+        color: white;
+        text-align: center;
+    }
+
+    #orari-apertura{
+        margin-top: 4px;
+        margin-bottom: 2px;
+        margin-left: 7px;
+    }
+
+    #titolo-orari{
+        text-align: left;
+        font-size: 20px;
+    }
+
+    #orari{
+        display: flex;
+        justify-content: left;
+    }
+
+    #paragrafo-orari{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    #pizza-img{
+        display: flex;
+        height: 50px;
+        width: auto;
+        margin-left: 10px;
+        margin-top: 35px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+    }
+
+    .pizza-div{
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .birra-div{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    #pizza-p{
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: brown;
+        margin-left: 10px;
+        padding: 2px 10px;
+        border-radius: 3px;
+    }
+
+
+    #birra-p{
+        display: flex;
+        font-size: 18px;
+        padding: 0 10px;
+        margin-top: 15px;
+        margin-left: 10px;
+        background-color: brown;
+        border-radius: 3px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #birra-img{
+        display: flex;
+        height: 50px;
+        width: auto;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        margin-left: 30px;
+
+    }
+
+    
+    #paragrafo-contattaci{
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        font-size: 14px;
+        background-color: brown;
+        padding: 0 10px;
+        margin: 0;
+        color: white;
+    }
+
+    #hr1{
+        padding: 0;
+        margin: 0;
+    }
+}

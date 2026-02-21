@@ -1,0 +1,9 @@
+CODICE PYTHON SECONDARIO
+
+
+Controlla se esiste	os.path.exists()
+Crea cartelle	os.makedirs()
+Copia un file	shutil.copy()
+Copia tutto (cartella)	shutil.copytree()
+Elimina tutto	shutil.rmtree()
+Zippa	shutil.make_archive()

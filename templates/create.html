@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SiteBase</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+
+        <header>
+            <section id="nav-section">
+                <nav class="navbar">
+                    <ul class="menu menu-create">
+                        <li><h1 id="NON_DEFINITIVO_EXAMPLE2">SiteBase</h1></li>
+                        <li><a href="{{url_for('index')}}">Home page</a></li>
+                        <li><a href="{{url_for('create')}}">Create your website</a></li>
+                        <li><a href="{{url_for('index')}}">Sign in</a></li>
+                        <li><a href="{{url_for('index')}}">about</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <hr id="hr2">
+            <section id="styles-bar">
+                <div class="relevant-styles">
+                    <button class="button-style">Modern</button>
+                    <button class="button-style">Dark</button>
+                    <button class="button-style">soft</button>
+                </div>
+            </section>
+            <hr id="hr2">
+
+            <section class="tool-bar">
+                <h2>Tools</h2>
+                <div class="tools-div">
+                    <button class="button-tool">Text</button>
+                    <button class="button-tool">Colors</button>
+                    <button class="button-tool">Images</button>
+                </div>
+
+                <div class="tool-properties-text">
+                    <form action="" id="form-tool">
+                        <input type="text" class="input-text" data-target = "#titolo_pizzeria" name="input-text">
+                      
+                        <input type="text" class="input-text" data-target = "#prenota_ora" name="input-text2">
+
+                        <input type="submit" id="submitIN-one">
+                    </form>
+                </div>
+
+                <a href="/downloads" class="download_btn">Download</a>
+            </section>
+
+            <section id="preview">
+                <iframe id="previewed-frame" src="{{url_for('anteprima')}}" frameborder="0"></iframe>
+            </section>
+        </main>
+    </body>
+    
+    <script src="{{url_for('static', filename='script.js')}}" defer></script>
+</html>
