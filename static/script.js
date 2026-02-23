@@ -49,8 +49,6 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
 }
 
 
-let cartella_utente = ""
-
 document.addEventListener("DOMContentLoaded", () => {
     let formTool = document.getElementById("form-tool");
     let userInputs = document.querySelectorAll(".input-text");
@@ -83,7 +81,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(dataPack)
-            });
+            })
+            /*.then(res => res.json())
+            .then(data => {
+                let cartella_utente = data.cartella_utente;
+                let url = "/download/" + cartella_utente;
+                fetch(url, {
+                   method: "POST"
+                })
+            })*/
         });
     });
 });

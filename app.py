@@ -1,14 +1,14 @@
-from flask import Flask, render_template, redirect, request, url_for, send_from_directory, after_this_request, send_file
+from flask import Flask, render_template, redirect, request, url_for, send_from_directory, after_this_request, send_file, session
 import os, shutil, uuid
 
 app = Flask(__name__)
+
+app.secret_key = "KAWDIOSJNWDAISDJWNALOSKW"
 
 
 @app.route("/")
 def index():
     return render_template("index.html")
-
-
 
 
 @app.route("/create", methods=["GET", "POST"])
@@ -74,6 +74,9 @@ def create():
     
     shutil.rmtree(fold_no_ext)
     
+    cuZip = cartella_utente + ".zip"
+
+    session["cartella_utente"] = cuZip
 
     return {
         "success": True,
@@ -86,7 +89,6 @@ def anteprima():
 
 @app.route("/downloads")
 def download_file():
-    global cartella_utente
     """fPath = os.path.join("downloads", "website_temp.zip")
     @after_this_request
     def rem_zip(response):
@@ -95,12 +97,17 @@ def download_file():
         except Exception as error:
             print(f"Not able tu run code because of: {error}")
         return response"""
+    
+    cartella_utente = session.get("cartella_utente")
 
-    return send_from_directory(
-        directory="downloads",
-        path=cartella_utente,
-        as_attachment=True
-    )
+    if cartella_utente:
+        return send_from_directory(
+            directory="downloads",
+            path=cartella_utente,
+            as_attachment=True
+        )
+    else:
+        return "Nessun file trovato", 404
     
 
 
