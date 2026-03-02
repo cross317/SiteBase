@@ -7,19 +7,21 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
 
     let currentIndex = 0;
 
-    const slideWidth = slides[0].offsetWidth;
-
     function UpdateCarousel(){  
         const width = slides[0].getBoundingClientRect().width; 
 
         track.style.transform = `translateX(-${currentIndex * width}px)`;
     }
 
+    window.addEventListener("resize", () => {
+        UpdateCarousel();
+    })
+    
     let autoSLide = setInterval(MoveNext, 3100)
 
     function MoveNext() {
         currentIndex++;
-        if (currentIndex > slides.length){
+        if (currentIndex >= slides.length){
             currentIndex = 0;
         }
         UpdateCarousel();
@@ -35,6 +37,7 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
         if (currentIndex >= slides.length) {
             currentIndex = 0;
         }
+        ResetTimer()
         UpdateCarousel();
     })
 
@@ -44,6 +47,7 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
         if (currentIndex < 0) {
             currentIndex = slides.length - 1;
         }
+        ResetTimer()
         UpdateCarousel();
     })
 }
@@ -82,14 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 body: JSON.stringify(dataPack)
             })
-            /*.then(res => res.json())
-            .then(data => {
-                let cartella_utente = data.cartella_utente;
-                let url = "/download/" + cartella_utente;
-                fetch(url, {
-                   method: "POST"
-                })
-            })*/
         });
     });
 });

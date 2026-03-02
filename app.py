@@ -102,62 +102,6 @@ def create():
 def anteprima():
     return render_template("user-templates/template-one/template-one-index.html")
 
-
-"""@app.route("/downloads")
-def download_file():
-    fPath = os.path.join("downloads", "website_temp.zip")
-    @after_this_request
-    def rem_zip(response):
-        try:
-            os.remove(fPath)
-        except Exception as error:
-            print(f"Not able tu run code because of: {error}")
-        return response
-    
-    cartella_utente = session.pop("cartella_utente", None)
-
-    if cartella_utente:
-        return send_from_directory(
-            directory="downloads",
-            path=cartella_utente,
-            as_attachment=True
-        )
-    else:
-        return "Nessun file trovato", 404
-    
-    zip_path = os.path.join("downloads", cartella_utente)
-
-    @after_this_request
-    def remove_zip(response):
-        try:
-            if os.path.exists(zip_path):
-                os.remove(zip_path)
-        except Exception as e:
-            print("Errore eliminazione zip:", e)
-        return response
-
-        return send_from_directory(
-            directory="downloads",
-            path=cartella_utente,
-            as_attachment=True)"""
-
-
-"""def delete_with_retry(path: str, delay: float = 2.0, retries: int = 30, interval: float = 1.0):
-    def job():
-        time.sleep(delay)
-        for _ in range(retries):
-            try:
-                if os.path.exists(path):
-                    os.remove(path)
-                return
-            except PermissionError:
-                time.sleep(interval)
-            except Exception as e:
-                print("Errore eliminazione zip:", e)
-                return
-    threading.Thread(target=job, daemon=True).start()"""
-
-
 @app.route("/downloads")
 def download_file():
 
@@ -165,13 +109,6 @@ def download_file():
 
     if not cartella_utente:
         return "Nessun file trovato", 404
-
-    """@after_this_request
-    def unpackDelete():
-        cartella_unzipped = shutil.unpack_archive(cartella_utente)
-        normal_path = os.path.join("downloads", cartella_utente)
-
-        delete_with_retry(normal_path, delay=5, retries=60, interval=0.5)"""
 
     return send_from_directory(
         directory="downloads",
