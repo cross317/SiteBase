@@ -17,7 +17,6 @@ def pulisciFile():
         for file_name in os.listdir(fold):
             extended_path = os.path.join(fold, file_name)
             life_time = t_now - os.path.getmtime(extended_path)
-            print(life_time)
             if life_time >= t_limit:
                 try:
                     os.remove(extended_path)
