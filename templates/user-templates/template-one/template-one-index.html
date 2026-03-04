@@ -1,167 +1,78 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Template - One</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/template-one-style.css')}}">
-    </head>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="static/css/template-one-style.css">
+</head>
     <body>
-        
-        <header id="home">
-            <section id="image">
-                <section id="navSection">
-                    <img src="{{url_for('static', filename='img/logoPizzeria.png')}}" width="100px" height="auto" alt="NavLogo">
-
-                    <nav class="navbar">
-                        <a href="#home">NavLink</a>
-                        <a href="#Prenota">NavLink</a>
-                        <a href="#Menu">NavLink</a>
-                        <a href="#ChiSiamo">NavLink</a>
-                        <a href="#orari-apertura">NavLink</a>
+       <header>
+            <section id="header-sec">
+                <div>
+                    <nav class="nav">
+                        <a href="#hero-section">home</a>
+                        <a href="#about">about</a>
+                        <a href="#footer">contact us</a>
                     </nav>
-
-                    <div class="hamburger">
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
-                        <span>
-                            
-                        </span>
-                    </div>
-                </section>
-                
-                <p id="titolo_pizzeria"class="titolo-pizzeria fade-scroll">Sub-Headline/Value-Proposion</p>
-                
-                <a id="prenota_ora" class="fade-scroll" href="#Prenota">Call To Action</a>
-
-            </section>
-            <hr id="hr1">
-        </header>
-
-        <main>
-            <section id="Prenota">
-                <h1 class="prenota-h1 fade-scroll"><strong>Paragraph Title</strong></h1>
-                <p class="numeroDiTelefono fade-scroll"><strong>Paragraph Text</strong></p>
-            </section>
-            
-            <hr id="hr1">
-
-            <div id="cosa-offriamo" class="fade-scroll">
-                <h1 class="fade-scroll">Menù</h1>
-            </div>
-           
-
-            <section id="Menu">
-
-                <div class="container ">
-                    <div class="menu-cibo">
-                        <h1 id="centrato" class="fade-scroll"> Pizze </h1>
-                        <h2 id="distanziato" class="fade-scroll"> Le classiche</h2>
-                        <ul>
-                            <li id="menu-li" class="fade-scroll">9.99€ Capricciosa.</li>
-                            <li id="menu-li" class="fade-scroll">9.99€ Diavola.</li>
-                            <li id="menu-li" class="fade-scroll">11.99€ 4 Formaggi.</li>
-                            <li id="menu-li" class="fade-scroll">8.99€ Marinara.</li>
-                            <li id="menu-li" class="fade-scroll">8.99€ Napoletana.</li>
-                            <li id="menu-li" class="fade-scroll">6.99€ Margherita.</li>
-                            <li id="menu-li" class="fade-scroll">10.99€ Americana.</li>
-                        </ul>
-                        <h2 id="distanziato" class="fade-scroll"> Specialità della casa</h2>
-                        <ul>
-                            <li id="menu-li" class="fade-scroll"> 12.99€ La Molisana - Bufala e salsiccia.</li>
-                            <li id="menu-li" class="fade-scroll"> 14.99€ La Bomba - Funghi porcini e tartufo nero.</li>
-                            <li id="menu-li" class="fade-scroll"> 14.99€ La Delicata - Mortadella, stracciatella e pistacchio.</li>
-                            <li id="menu-li" class="fade-scroll"> 13.99€ La Luisiana - Patate e salsiccia.</li>
-                            <li id="menu-li" class="fade-scroll"> 13.99€ La Splendida - Bufala e tartufo.</li>
-                        </ul>
-                    </div>
-
-                    <div class="menu-bevande fade-scroll">
-                        <h1 id="centrato" class="fade-scroll"> Bevande </h1>
-                        <ul>
-                            <li id="menu-li" class="fade-scroll">1.39€ Acqua.</li>
-                            <li id="menu-li" class="fade-scroll">1.99€ Acqua gasata.</li>
-                            <li id="menu-li" class="fade-scroll">2.39€ CocaCola in lattina.</li>
-                            <li id="menu-li" class="fade-scroll">2.99€ CocaCola - Bottiglia di vetro.</li>
-                            <li id="menu-li" class="fade-scroll">2.39€ Fanta in lattina.</li>
-                            <li id="menu-li" class="fade-scroll">1.99€ Sprite - Bottiglia di vetro.</li>
-                        </ul>
-                        <h2 id="distanziato" class="fade-scroll">Vini e Birre</h2>
-                        <ul>
-                            <li id="menu-li" class="fade-scroll"> 15.99€ Vino rosso della casa.</li>
-                            <li id="menu-li" class="fade-scroll"> 14.99€ Vino bianco della casa.</li>
-                            <li id="menu-li" class="fade-scroll"> 9.99€ Birra piccola.</li>
-                            <li id="menu-li" class="fade-scroll"> 12.99€ Birra media.</li>
-                            <li id="menu-li" class="fade-scroll"> 14.99€ Birra alla spina.</li>
-                        </ul>
-                    </div>
                 </div>
             </section>
-
-            <div class="pizza-div">
-                <img id="pizza-img" class="fade-scroll" src="{{url_for('static', filename='img/pizza.jpg')}}" width="" alt="img-pizza">
-                <p id="pizza-p" class="fade-scroll"><strong>Text 4</strong></p>
-            </div>
-         
-            <hr id="hr1">
-
-            <div div class="birra-div">
-                <p id="birra-p" class="fade-scroll"><strong>Text 5</strong></p>
-                <img id="birra-img" class="fade-scroll" src="{{url_for('static', filename='img/birra.jpg')}}" alt="img-birra">
-            </div>
-
-            <hr id="hr1">
-
-            <section id="ChiSiamo">
-                <h1 id="titolo-chiSiamo" class="fade-scroll">About us</h1>
-
-                <div class="chi-siamo">
-                    <p id="paragrafo-chiSiamo" class="fade-scroll"><strong>Text 6</strong></strong></p>
-                    <img id="logo2" src="{{url_for('static', filename='img/logoPizzeria.png')}}" alt="Logo">
+            <hr>
+       </header> 
+       
+       <main>
+            <section id="hero-section">
+                <div class="image-grid">
+                    <div class="img-block block-one"><p>First image</p></div>
+                    <div class="img-block block-two"><p>Second image</p></div>
+                    <div class="img-block block-three"><p>Third image</p></div>
+                    <div class="img-block block-four"><p>Fourth image</p></div>
+                    <div class="img-block block-five"><p>Fifth image/logo</p></div>
+                    <div class="img-block block-six"><p>Sixth image</p></div>
+                    <div class="img-block block-seven"><p>Seventh image</p></div>
+                    <div class="img-block block-eight"><p>Eighth image</p></div>
+                    <div class="img-block block-nine"><p>Ninth image</p></div>
                 </div>
-                <p id="paragrafo-contattaci" class="fade-scroll"> <strong>Text 7</strong></p>
-                <h2 id="h2-chiSiamo" class="fade-scroll"><strong>Text 8</strong></h2>
+                <div class="text-div">
+                    <h2 class="text-one">Title/Brand Name</h2>
+                    <a href="#footer" class="callTo-action">contact us</a>
+                    <h3 class="text-two">Subtitle/Slogan</h3>
+                </div>
+           </section>
+       </main>
+       
+       <hr id="hr">
+
+       <section id="about">
+            <div class="grid-abt">
+                <div class="div-about title-about">
+                    <h2 class="abt-title">About/Paragraph Title</h2>
+                </div>
+                <div class="div-about decoration-about">
+                    <div class="dec-div"></div>
+                    <div class="dec-div"></div>
+                    <div class="dec-div"></div>
+                    <div class="dec-div"></div>
+                    <div class="dec-div"></div>
+                </div>
+                <div class="div-about content-about">
+                    <p class="abt-content">About Content/ Paragraph Content</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <section class="footer-sec">
+                <div class="footer-div-one">
+                    <p class="footer-slogan">Slogan/Title</p>
+                    <p class="footer-email">Businness Email</p>
+                    <p class="footer-link">Social Media Link/s</p>
+
+                </div>
+                <div class="footer-div-two">
+                    <p>Legal Notice: This section is dedicated to your mandatory legal and business information. SiteBase is a technical service provider and is not responsible for the legal compliance, accuracy, or validity of the content provided by the user. By using this template, you acknowledge that ensuring your website meets all local legal requirements is your sole responsibility. This section is locked to preserve the necessary structure for professional transparency.</p>
+                </div>
             </section>
-
-            <hr id="hr1">
-
-            <section id="orari-apertura">
-                <h1 id="titolo-orari" class="fade-scroll"> </h1>
-
-                <div id="orari">
-                    <p id="paragrafo-orari" class="fade-scroll"> Siamo aperti dal lunedi al venerdì dalle 12:00 del mattino <br> fino alle 15:00 del pomeriggio  e riapriamo <br> alle 19:00 fino alle 23:00 della sera. <br><br> Siamo aperti anche di sabato dalle 19:00 alle 22:30 della sera</p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer">
-                <hr id="hr1">
-                <div class="footer-navbar">
-                    <a href="#home">Home</a>
-                    <a href="#Prenota">Prenota</a>
-                    <a href="#Menu">Menù</a>
-                    <a href="#ChiSiamo">Chi siamo</a>
-                    <a href="#orari-apertura">Orari di apertura</a>
-                </div>
-                <hr id="hr1">
-                <p id="footer-copyright">© 2025 Pizzeria La Ferri — Tutti i diritti riservati
-                    Privacy Policy | Termini e Condizioni <br> Contattaci: 33 333 333 33 o pizzerialaferri@example.ex</p>
-            </div>
         </footer>
     </body>
-
-    <script src="{{ url_for('static', filename='template-one-script.js')}}"></script>
 </html>
-

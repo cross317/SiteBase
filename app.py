@@ -7,7 +7,7 @@ app.secret_key = "KAWDIOSJNWDAISDJWNALOSKW"
 
 def pulisciFile():
     fold = "downloads"
-    t_limit = 5
+    t_limit = 10
 
     time.sleep(2)
 
@@ -74,16 +74,16 @@ def create():
     with open(os.path.join(fold_no_ext, "style.css"), "w", encoding="utf-8") as f_css_new:
         f_css_new.write(style)
 
-    with open("static/template-one-script.js", "r", encoding="utf-8") as f_js_old:
+    """with open("static/template-one-script.js", "r", encoding="utf-8") as f_js_old:
         js_content = f_js_old.read()
     with open(os.path.join(fold_no_ext, "script.js"), "w", encoding="utf-8") as f_js_new:
-        f_js_new.write(js_content)
+        f_js_new.write(js_content)"""
 
-    imgs_sorgente = "static/img"
+    """imgs_sorgente = "static/img"
 
     img_destinazione = os.path.join(fold_no_ext, "img")
 
-    shutil.copytree(imgs_sorgente, img_destinazione, dirs_exist_ok=True)
+    shutil.copytree(imgs_sorgente, img_destinazione, dirs_exist_ok=True)"""
 
     shutil.make_archive(fold_no_ext, 'zip', fold_no_ext)
     

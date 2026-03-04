@@ -26,9 +26,8 @@
             <hr id="hr2">
             <section id="styles-bar">
                 <div class="relevant-styles">
-                    <button class="button-style">Modern</button>
-                    <button class="button-style">Dark</button>
-                    <button class="button-style">soft</button>
+                    <button class="button-style">Modern/Dark</button>
+                    <button class="button-style">Soft/Colored</button>
                 </div>
             </section>
             <hr id="hr2">
@@ -36,18 +35,33 @@
             <section class="tool-bar">
                 <h2>Tools</h2>
                 <div class="tools-div">
-                    <button class="button-tool">Text</button>
-                    <button class="button-tool">Colors</button>
-                    <button class="button-tool">Images</button>
+                    <button class="button-tool btn-one">Text</button>
+                    <button class="button-tool btn-two">Colors</button>
+                    <button class="button-tool btn-three">Images</button>
                 </div>
 
                 <div class="tool-properties-text">
                     <form action="" id="form-tool">
-                        <input type="text" class="input-text" data-target = "#titolo_pizzeria" name="input-text">
+                        <input type="text" class="input-text" data-target = ".text-one" name="input-text" placeholder="Title/Brand Name">
                       
-                        <input type="text" class="input-text" data-target = "#prenota_ora" name="input-text2">
+                        <input type="text" class="input-text" data-target = ".text-two" name="input-text2" placeholder="Slogan/Subtitle">
+                        
+                        <input type="text" class="input-text" data-target = ".abt-title" name="input-text3" placeholder="About/Paragraph Title">
 
+                        <input type="text" class="input-text" data-target = ".abt-content" name="input-text4" placeholder="About/Paragraph Content">
+
+                        <input type="text" class="input-text" data-target = ".footer-slogan" name="input-text5" placeholder="Footer Slogan">
+
+                        <input type="text" class="input-text" data-target = ".footer-email" name="input-text6" placeholder="Footer Email">
+
+                        <input type="text" class="input-text" data-target = ".footer-link" name="input-text7" placeholder="Footer Link">
                         <input type="submit" id="submitIN-one">
+                    </form>
+                    <form action="" id="form-tool-colors">
+                        <input type="color">
+                    </form>
+                    <form action="" id="form-tool-images">
+                        <input type="text">
                     </form>
                 </div>
 

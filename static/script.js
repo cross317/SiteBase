@@ -54,12 +54,37 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    let btnText = document.querySelector(".btn-one");
+    let btnColors = document.querySelector(".btn-two");
+    let btnImgaes = document.querySelector(".btn-three");
+
+    let formToolImages = document.getElementById("form-tool-images");
+    let formToolColors = document.getElementById("form-tool-colors");
     let formTool = document.getElementById("form-tool");
+
+    function SwitchForm(targetForm){
+        formTool.style.display = "none";
+        formToolColors.style.display = "none";
+        formToolImages.style.display = "none";
+        targetForm.style.display = "flex";
+    }
+
+    if (btnText){
+        btnText.addEventListener("click", () => { SwitchForm(formTool) })
+    }
+    if (btnColors){
+        btnColors.addEventListener("click", () => { SwitchForm(formToolColors)} )
+    }
+    if (btnImgaes){
+        btnImgaes.addEventListener("click", () => { SwitchForm(formToolImages) })
+    }
+
     let userInputs = document.querySelectorAll(".input-text");
     let dl_btn = document.querySelector(".download_btn")
 
     /** @type {HTMLIFrameElement} **/
     const iframe = document.getElementById("previewed-frame");
+
 
     iframe.addEventListener("load", () => {
         const iDoc = iframe.contentDocument;
