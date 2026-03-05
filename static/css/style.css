@@ -365,6 +365,20 @@ footer{
     border-radius: 5px;
 }
 
+#create-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color-darkBG);
+    background-color: var(--navBG-color);
+    border-radius: 20px;
+    border: 2px var(--lightWhite) solid;
+    margin-top: 7px;
+    margin-left: 45px;
+    width: 70%;
+}
+
 .menu-create{
     background-color: var(--darkbG);
 }
@@ -401,7 +415,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    gap: 5px;
+    gap: 15px;
     flex-direction: column;
 }
 
@@ -417,6 +431,8 @@ footer{
     background: rgb(28, 28, 28);
 }
 
+
+
 .span-background{
     display: flex;
     justify-content: center;
@@ -429,7 +445,7 @@ footer{
     background: rgb(28, 28, 28);
 }
 
-.span-background:hover{
+.span-general:hover{
     transform: scale(1.1);
     background: rgb(40, 40, 40);
 }

@@ -80,18 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let userInputs = document.querySelectorAll(".input-text");
-    let dl_btn = document.querySelector(".download_btn")
+    let uIColors = document.querySelectorAll(".input-color");
+    let dl_btn = document.querySelector(".download_btn");
 
     /** @type {HTMLIFrameElement} **/
     const iframe = document.getElementById("previewed-frame");
 
-
     iframe.addEventListener("load", () => {
         const iDoc = iframe.contentDocument;
+        let dataPack = {}
         formTool.addEventListener("submit", (e) =>  {
             e.preventDefault();
-
-            let dataPack = {}
 
             userInputs.forEach(input => {
                 const selector = input.getAttribute("data-target");
@@ -102,8 +101,64 @@ document.addEventListener("DOMContentLoaded", () => {
                     dataPack[selector] = input.value;
                 }
             });
-            alert(JSON.stringify(dataPack))
+            alert(JSON.stringify(dataPack));
             
+        });
+
+        formToolColors.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let bgPrimary = "#BFC3C5F4";
+            let bgSecondary = "#011114F4";
+
+            let bodyBGModifier = "";
+
+            uIColors.forEach(uIC => {
+                const colorSelector = uIC.getAttribute("data-target");
+                const colorElement = iDoc.querySelector(colorSelector);
+
+                if (colorElement){
+                    if (uIC.getAttribute("data-type") == "background-gradient")
+                    {   
+                        if (uIC.getAttribute("data-gradient-type") == "primary")
+                        {
+                            bgPrimary = uIC.value;
+                            bodyBGModifier = colorElement;
+                        }
+                        else if (uIC.getAttribute("data-gradient-type") == "secondary")
+                        {
+                            bgSecondary = uIC.value;
+                        }
+                    }
+                    else if (uIC.getAttribute("data-type") == "color")
+                    {
+                        colorElement.style.color = uIC.value;
+                    }
+                    else if (uIC.getAttribute("data-type") == "background")
+                    {
+                        colorElement.style.background = uIC.value;
+                    }
+                    
+                    dataPack[colorSelector] = uIC.value;
+                }
+                
+            })
+
+            let cssSintax = `linear-gradient(to right, ${bgPrimary}, ${bgSecondary})`;
+
+            if (bodyBGModifier){
+                bodyBGModifier.style.background = cssSintax;
+            }
+
+            alert(JSON.stringify(dataPack));
+    
+        })
+
+        let createBtn = document.getElementById("create-button");
+
+        createBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+
             fetch("/create", {
                 method: "POST",
                 headers: {
@@ -111,6 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 body: JSON.stringify(dataPack)
             })
-        });
+        })
     });
 });

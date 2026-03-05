@@ -26,8 +26,8 @@ def pulisciFile():
         time.sleep(5)
 
 
-thread_pulizia = threading.Thread(target=pulisciFile, daemon=True)
-thread_pulizia.start()
+"""thread_pulizia = threading.Thread(target=pulisciFile, daemon=True)
+thread_pulizia.start()"""
 
 @app.route("/")
 def index():
@@ -67,7 +67,7 @@ def create():
     with open(index, "w", encoding="utf-8") as f_new:
         f_new.write(html)
 
-    with open("static/css/template-one-style.css", "r", encoding="utf-8") as f_css_old:
+    with open("static/css/timplate-one-style-siteCode.css", "r", encoding="utf-8") as f_css_old:
         css_content = f_css_old.read()
     style = css_content.replace("../img/", "img/")
 
@@ -103,6 +103,9 @@ def anteprima():
 
 @app.route("/downloads")
 def download_file():
+
+    thread_pulizia = threading.Thread(target=pulisciFile, daemon=True)
+    thread_pulizia.start()
 
     cartella_utente = session.pop("cartella_utente", None)
 

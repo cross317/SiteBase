@@ -58,28 +58,50 @@
                         <input type="submit" id="submitIN-one">
                     </form>
                     <form action="" id="form-tool-colors">
-                        <label for="background-color" class="label-general background-label">
-                            <span class="span-general span-background">Background Color</span>
-                        </label>
-                        <input type="color" id="background-color" class="input-color">
-                        <label for="background-color" class="label-general color-two">
+                        <label for="background-color-primary" class="label-general background-label">
                             <span class="span-general">Background Color</span>
                         </label>
-                        <input type="color" id="color-two" class="input-color">
-                        <label for="background-color" class="label-general color-three">
+                        <input type="color" id="background-color-primary" class="input-color" data-target="#body" data-type="background-gradient" data-gradient-type="primary">
+                        
+                        <label for="background-color-secondary" class="label-general background-label">
                             <span class="span-general">Background Color</span>
                         </label>
-                        <input type="color" id="color-three" class="input-color">
-                        <label for="background-color" class="label-general text-color">
-                            <span class="span-general">Background Color</span>
+                        <input type="color" id="background-color-secondary" class="input-color" data-target=".body_second_input" data-type="background-gradient" data-gradient-type="secondary">
+
+                        <label for="color-two" class="label-general color-two">
+                            <span class="span-general">Title/Brand Name Color</span>
                         </label>
-                        <input type="color" id="text-color" class="input-color">
+                        <input type="color" id="color-two" class="input-color" data-target="#text_one" data-type="color">
+
+                        <label for="sub-text" class="label-general color-three">
+                            <span class="span-general">Subtitle/Slogan Color</span>
+                        </label>
+                        <input type="color" id="sub-text" class="input-color" data-target="#text_two" data-type="color">
+
+                        <label for="text-color" class="label-general text-color" >
+                            <span class="span-general">About Text Color</span>
+                        </label>
+                        <input type="color" id="text-color" class="input-color" data-target="#abt_content" data-type="color">
+
+                         <label for="input-abt" class="label-general text-color">
+                            <span class="span-general">About Background Color</span>
+                        </label>
+                        <input type="color" id="input-abt" class="input-color" data-target="#div_about" data-type="background">
+
+                        <label for="input-footer" class="label-general text-color">
+                            <span class="span-general">Footer Background Color</span>
+                        </label>
+                        <input type="color" id="input-footer" class="input-color" data-target="#footer" data-type="background">
+
+
+                        <input type="submit" id="submitIN-one" placeholder="View Preview">
                     </form>
                     <form action="" id="form-tool-images">
                         <input type="text">
                     </form>
                 </div>
 
+                <button id="create-button">Create Code</button>
                 <a href="/downloads" class="download_btn">Download</a>
             </section>
 
